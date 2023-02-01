@@ -1,0 +1,26 @@
+import java.util.*;
+class Set_Ex{
+    public static void main(String[] args){
+        Set<Integer> a = new HashSet<Integer>();
+        a.addAll(Arrays.asList(new Integer[]{1,2,7,8,9}));
+        Set<Integer> b = new HashSet<Integer>();
+        b.addAll(Arrays.asList(new Integer[]{3,5,6,7,8}));
+        Set<Integer> union = new HashSet<Integer>(a);
+        union.addAll(b);
+        System.out.println(union);
+
+        Set<Integer> intersection = new HashSet<Integer>(a);
+        intersection.retainAll(b);
+        System.out.print("Intersection of the two Set");
+        System.out.println(intersection);
+  
+        // To find the symmetric difference
+        Set<Integer> difference = new HashSet<Integer>(a);
+        difference.removeAll(b);
+        System.out.print("Difference of the two Set");
+        System.out.println(difference);
+    }
+}
+/*Output: [1, 2, 3, 5, 6, 7, 8, 9]
+Intersection of the two Set[7, 8]
+Difference of the two Set[1, 2, 9]*/
