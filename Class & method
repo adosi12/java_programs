@@ -1,0 +1,43 @@
+public class DressOOPS {
+    //Instance Variables
+    String name;
+    String style;
+    char size;
+    String color;
+
+    //constructor declaration of class members
+    public DressOOPS(String name, String style, char size, String color) {
+        this.name = name;
+        this.style = style;
+        this.color = color;
+        this.size = size;
+    }
+
+    //method 1
+    public String getName() {
+        return name;
+    }
+
+    //method 2
+    public String getStyle() {
+        return style;
+    }
+    public char getsize() {
+        return size;
+    }
+
+    //method 3
+    public String getColor() {
+        return color;
+    }
+
+    @Override
+    public String toString() {
+        return ("Hi my name is "+this.getName()+".\nMy style,size and color are "+ this.getStyle()+" ,"+this.getColor()+" ,"+this.getsize());
+
+    }
+    public static void main(String[] args){
+        DressOOPS Jumpsuit = new DressOOPS("adi","fancy",'l',"red");
+        System.out.println(Jumpsuit.toString());
+    }
+}
